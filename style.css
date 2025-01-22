@@ -1,0 +1,360 @@
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top,#020b01, #0d2b16,#2b4e31,#517a53,#93ac82,#517a53,#2b4e31,#0d2b16,#020b01);
+  font-family: Verdana, sans-serif;
+ 
+}
+
+/* Start Nav */
+
+nav {
+  position: sticky;
+  top: 0;
+ 
+
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8% 0px;
+  letter-spacing: 4px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  color: #fdfdfd;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 249, 249);
+  font-size: 18px;
+}
+
+li {
+  padding: 10px 30px
+}
+
+li:hover {
+  background-color: rgba(9, 67, 13, 0.756);
+  cursor: pointer;
+}
+
+.logo:hover{
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+/* End Nav */
+/* Start Body */
+
+/* Start Header */
+header {
+  background-image: url(./pictures/73f8a523a1b5fd6e485738271c18c71e.jpg);
+  position: relative;
+  height: 130vh;
+  background-position:50% ;
+  display: flex;
+  padding-left: 400px;
+  align-items: center;
+  color: rgb(254, 254, 254);
+  background-size: cover;
+  font-size: 32px;
+  gap: 0%;
+}
+
+header h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(4, 108, 18, 0.7);
+  font-size: 40px;
+  border-radius: 5%;
+}
+
+header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+/* End Header */
+
+/* Start Projects */
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+}
+
+.pro-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+}
+
+#projects h3, #about h3, #contact h3 {
+  font-weight: lighter;
+  font-size: 25px;
+  padding-bottom: 1%;
+  margin-bottom: 1.5%;
+  border-bottom: 1px solid #000000;
+}
+
+.projects-cards {
+  display: grid;
+  gap: 40px;
+}
+
+
+.projects-cards div {
+  background-size: 100%;
+  
+}
+ 
+.projects-cards div p {
+  background-color: black;
+  color: white;
+  padding: 3%;
+  width: fit-content;
+}
+/* End Projects */
+
+/* Start About */
+#about {
+  height: min-content;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-cards .card img{
+  width: 100%;
+  height: 900px;
+ 
+}
+/* End About */
+
+/* Start Contact */
+#contact{
+  height: min-content;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+}
+
+#contact form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 33px;
+}
+
+form input{
+  height: 50px;
+  padding: 15px;
+  border-radius: 1px;
+  border: 1px solid #000000;
+  background-color:rgb(255, 255, 255) ;
+  border-radius: 5px;
+}
+
+form button{
+  width: fit-content;
+  padding: 15px 30px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  border-radius: 5px;
+}
+/* End Contact */
+
+/* Start Map */
+.map{
+  height: min-content;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+/* End Map */
+
+/* End Body */
+/* Start Footer */
+.map{
+ max-width: 1400%; 
+}
+
+footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+/* End Footer */
+
+/* Start Responsive */
+
+@media only screen and (min-width: 992px) {
+  .projects-cards{
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, 300px);
+  }
+
+  #about .about-cards{
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: min-content;
+    gap: 2%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .projects-cards{
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, 200px);
+  }
+
+  #about .about-cards{
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: min-content;
+    gap: 2%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .projects-cards{
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, 150px);
+    gap: 1.5%;
+  }
+
+  #about {
+    padding: 3%;
+  }
+
+  #about .about-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: min-content;
+    gap: 2%;
+    justify-content: center;
+  }
+  
+  .about-cards .card{
+    gap: 7px;
+  }
+  
+  .about-cards .card .name{
+    font-size: 18px;
+  }
+  
+  .about-cards .card span{
+    font-size: 12px;
+  }
+  
+  .about-cards .card .bio{
+    font-size: 12px;
+  }
+  
+  .about-cards .card button{
+    height: 32px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 1% 0px;
+    letter-spacing: 2px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1%;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+  }
+  
+  li {
+    padding: 10px 10px
+  }
+  
+  .projects-cards{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects-cards div{
+    height: 250px;
+  }
+
+  #projects h3, #about h3, #contact h3{
+    margin-bottom: 15px;
+  }
+
+  #about .desc{
+    font-size: 13px;
+  }
+
+  
+  #about .about-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .projects-cards{
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, 200px);
+    row-gap: 5%;
+  }
+
+  #about .about-cards{
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: min-content;
+    gap: 2%;
+    justify-content: center;
+  }
+}
